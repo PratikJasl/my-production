@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import profileImage from "../../assets/ProfileImage2.png";
+import profileimage from "../../assets/profile1.png";
 import { useIsVisible } from "../../services/useIsVisible";
 import { useRef } from "react";
 
@@ -74,7 +74,7 @@ function Details(){
                 <div ref={Ref1} className="flex md:flex-row flex-col 2xl:gap-130 md:gap-60 gap-15 items-center justify-center md:text-start text-center p-5">
                     <div className={` ${isVisible1 ? "animate-fadeInLeft" : ""}`}>
                         <img 
-                            src={profileImage} 
+                            src={profileimage} 
                             alt="Profile"
                             className="2xl:h-140 md:h-110 h-65 object-cover"
                         />
@@ -105,7 +105,7 @@ function Details(){
 
                     <div className={`order-1 lg:order-none ${isVisible2 ? "animate-fadeInRight" : ""}`}>
                         <img 
-                            src={profileImage} 
+                            src={profileimage} 
                             alt="Profile"
                             className="2xl:h-140 md:h-110 h-65 object-cover"
                         />

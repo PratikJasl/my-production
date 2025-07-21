@@ -1,4 +1,4 @@
-import profileImage from "../../assets/Profileimage2.png";
+import profileimage from "../../assets/profile1.png";
 import { PhoneIcon } from "@heroicons/react/24/outline";
 import { useIsVisible } from "../../services/useIsVisible";
 import { useRef } from "react";
@@ -59,7 +59,7 @@ function About(){
 
                 <div className={`2xl:h-140 2xl:w-160 md:h-120 md:w-150 order-1 md:order-none ${isVisible ? "animate-fadeInRight" : ""}`}>
                     <img 
-                        src={profileImage}
+                        src={profileimage}
                         alt="profile-pic" 
                         className="md:h-full md:w-full h-60 object-cover" 
                     />

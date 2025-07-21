@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from 'react';
-import Testimonial1 from "../../assets/Testimonial1.png";
+import testimonial1 from "../../assets/testimonial1.png";
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 
 function Testimonials() {
@@ -11,35 +11,35 @@ function Testimonials() {
     //@dev: Array of testimonials
     const testimonialsData = [
         {
-            image: Testimonial1,
+            image: testimonial1,
             name: "Mr. Rohan Sahi",
             title: "Manager @British Telecom",
             batch: "Adults Batch",
             quote: "This academy is a game-changer! From day one, I felt the passion and professionalism. My footwork and shot placement have improved immensely."
         },
         {
-            image: Testimonial1,
+            image: testimonial1,
             name: "Ms. Priya Sharma",
             title: "Software Engineer @Google",
             batch: "Advanced Batch",
             quote: "The personalized coaching here is unmatched. I've significantly improved my strategy and control. Highly recommend for serious players!"
         },
         {
-            image: Testimonial1,
+            image: testimonial1,
             name: "Master Aryan Singh",
             title: "Student @DPS",
             batch: "Juniors Batch",
             quote: "I love coming here! The coaches are fun and teach us so many new techniques. My smashes are much stronger now!"
         },
         {
-            image: Testimonial1,
+            image: testimonial1,
             name: "Dr. Anjali Verma",
             title: "Physician @Apollo Hospitals",
             batch: "Morning Batch",
             quote: "A fantastic way to stay active and learn. The flexible timings and friendly environment make it perfect for busy professionals."
         },
         {
-            image: Testimonial1,
+            image: testimonial1,
             name: "Coach David Lee",
             title: "Ex-Pro Player",
             batch: "Pro Training",
