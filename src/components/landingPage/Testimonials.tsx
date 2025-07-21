@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from 'react';
-import testimonial1 from "../../assets/testimonial1.png";
+import testimonial1 from "../../assets/profile3.png";
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 
 function Testimonials() {

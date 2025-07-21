@@ -1,4 +1,4 @@
-import logo from "../../assets/Logo2.png";
+import logo from "../../assets/logo.png";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { Bars3Icon} from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
