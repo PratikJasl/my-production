@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "tailwindcss";
+
+/* Enable smooth scrolling */
+html {
+
+  scroll-behavior: smooth;
+  
+}
+
+@layer utilities {
+  .scrollbar-custom {
+    scrollbar-width: thin;
+    scrollbar-color: #4b5563 #060606;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar {
+    height: 5px;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    background-color: #4b5563;
+    border-radius: 5px;
+    border: 2px solid #f3f4f6;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-track {
+    background-color: #f3f4f6;
+    border-radius: 5px;
+  }
+}
+
+@theme {
+  --animate-fadeInRight: fadeInRight 2s ease-in-out forwards;
+  --animate-fadeInLeft: fadeInLeft 2s ease-in-out forwards;
+  --animate-fadeInUp: fadeInUp 2s ease-in-out forwards;
+
+  @keyframes fadeInRight {
+    0%{
+      opacity: 0;
+      transform: translateX(100px)
+    }
+    100%{
+      opacity: 1;
+      transform: translateX(0px)
+    }
+  }
+
+  @keyframes fadeInLeft {
+    0%{
+      opacity: 0;
+      transform: translateX(-50px)
+    }
+    100%{
+      opacity: 1;
+      transform: translateX(0px)
+    }
+  }
+
+  @keyframes fadeInUp {
+    0%{
+      opacity: 0;
+      transform: translateY(50px)
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0px)
+    }
+  }
+}
