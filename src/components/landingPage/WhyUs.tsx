@@ -13,7 +13,7 @@ function WhyUS(){
     const Ref2 = useRef<HTMLDivElement | null>(null);
     const isVisible2 = useIsVisible(Ref2);
     return(
-        <section id="WhyUs" className="w-full 2xl:mt-400 md:mt-235 mt-380 p-25">
+        <section id="WhyUs" className="w-full 2xl:mt-30 md:mt-20 mt-15">
             <div className="flex flex-col items-center justify-center 2xl:gap-15 gap-5">
                 <div ref={Ref1} className={`flex flex-col items-center justify-center 2xl:gap-15 md:gap-8 md:w-full w-86 gap-5 ${isVisible1 ? "animate-fadeInUp" : ""}`}>
                     <h1 className="2xl:text-9xl md:text-8xl text-6xl font-bold">Why <span className="text-green-400">Us</span> ?</h1>

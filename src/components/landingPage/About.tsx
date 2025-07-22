@@ -10,10 +10,10 @@ function About(){
         <section 
             id="About" 
             ref={Ref1}
-            className={`flex 2xl:max-w-900 md:max-w-300 max-w-82 md:p-5 2xl:mt-40 mt-40 
+            className={`flex md:mt-40 mt-20 w-screen 2xl:p-20 md:p-15 p-10
             transition-opacity ease-in duration-700 ${isVisible ? "opacity-100" : "opacity-0"}`}
         >
-            <div className="flex lg:flex-row flex-col items-center justify-center 2xl:gap-100 md:gap-20 gap-5">
+            <div className="flex w-full md:flex-row flex-col items-center justify-between gap-5">
                 <div className="flex flex-col order-2 md:order-none gap-5">
                     <div className={`flex flex-col md:gap-8 gap-5 sm:items-center md:items-start md:text-left text-center ${isVisible ? "animate-fadeInLeft" : ""}`}>
                         <div className="flex flex-col md:items-start items-center md:gap-5 gap-1">
@@ -57,11 +57,11 @@ function About(){
                     </div>
                 </div>
 
-                <div className={`2xl:h-140 2xl:w-160 md:h-120 md:w-150 order-1 md:order-none ${isVisible ? "animate-fadeInRight" : ""}`}>
+                <div className={`order-1 md:order-none ${isVisible ? "animate-fadeInRight" : ""}`}>
                     <img 
                         src={profileimage}
                         alt="profile-pic" 
-                        className="md:h-full md:w-full h-60 object-cover" 
+                        className="2xl:h-130 md:h-110 h-60 object-cover" 
                     />
                 </div>
             </div>

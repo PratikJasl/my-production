@@ -67,11 +67,11 @@ function Details(){
     return(
         <section 
             id="details" 
-            className="w-full 2xl:mt-40 md:mt-25 mt-30 transition-opacity ease-in duration-700"
+            className="w-full 2xl:mt-40 md:mt-25 mt-30 2xl:p-30 md:p-15 p-10 transition-opacity ease-in duration-700"
         >
-            <div className="w-full flex flex-col 2xl:gap-40 gap-20 items-center bg-center bg-no-repeat h-100">   
+            <div className="w-full flex flex-col 2xl:gap-40 gap-20 items-center bg-center bg-no-repeat">   
                 {/* First Section */}
-                <div ref={Ref1} className="flex md:flex-row flex-col 2xl:gap-130 md:gap-60 gap-15 items-center justify-center md:text-start text-center p-5">
+                <div ref={Ref1} className="w-full md:px-15 flex md:flex-row flex-col items-center justify-between md:text-start text-center gap-5">
                     <div className={` ${isVisible1 ? "animate-fadeInLeft" : ""}`}>
                         <img 
                             src={profileimage} 
@@ -93,7 +93,7 @@ function Details(){
                 </div>
 
                 {/* Second Section */}
-                <div ref={Ref2} className="flex md:flex-row flex-col 2xl:gap-130 md:gap-45 gap-15 items-center justify-center w-full p-5">
+                <div ref={Ref2} className="w-full md:px-20 flex md:flex-row flex-col items-center justify-between md:text-start text-center gap-5">
                     <div className={`flex flex-col order-2 md:order-none md:gap-5 gap-1 2xl:w-140 md:w-110 w-74 items-center justify-center md:text-start text-center ${isVisible2 ? "animate-fadeInLeft" : ""}`}>
                         <p className="2xl:text-9xl md:text-8xl text-5xl font-bold">
                             From <span className="text-green-400">street</span> to <span className="text-green-400">state</span> !!
@@ -113,7 +113,7 @@ function Details(){
                 </div>
                 
                 {/* Third Section */}
-                <div ref={Ref3} className="flex md:flex-row flex-col 2xl:gap-60 md:gap-40 gap-20 items-center justify-center w-full 2xl:p-25 p-10 bg-green-900 font-serif mt-5">   
+                <div ref={Ref3} className="w-screen flex md:flex-row flex-col 2xl:gap-60 md:gap-40 gap-20 items-center justify-center 2xl:p-25 p-10 bg-green-900 font-serif mt-5">   
                     <div className="flex flex-col 2xl:gap-5 text-center">
                         <h1 className="2xl:text-7xl md:text-5xl text-4xl">{playersTrained}+</h1>
                         <p className="2xl:text-5xl text-3xl mt-2">Players Trained</p>
