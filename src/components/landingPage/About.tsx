@@ -10,7 +10,7 @@ function About(){
         <section 
             id="About" 
             ref={Ref1}
-            className={`flex md:mt-40 mt-20 w-screen 2xl:p-20 md:p-15 p-10
+            className={`flex md:mt-20 mt-10 w-screen 2xl:p-20 md:p-15 p-10
             transition-opacity ease-in duration-700 ${isVisible ? "opacity-100" : "opacity-0"}`}
         >
             <div className="flex w-full md:flex-row flex-col items-center justify-between gap-5">

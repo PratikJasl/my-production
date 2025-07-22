@@ -67,7 +67,7 @@ function Details(){
     return(
         <section 
             id="details" 
-            className="w-full 2xl:mt-40 md:mt-25 mt-30 2xl:p-30 md:p-15 p-10 transition-opacity ease-in duration-700"
+            className="2xl:mt-40 md:mt-20 mt-10 w-full  2xl:p-30 md:p-15 p-10 transition-opacity ease-in duration-700"
         >
             <div className="w-full flex flex-col 2xl:gap-40 gap-20 items-center bg-center bg-no-repeat">   
                 {/* First Section */}

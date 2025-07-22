@@ -103,7 +103,7 @@ function Testimonials() {
             <div className="relative lg:w-full w-70 flex items-center justify-center">
                 <button
                     onClick={() => slide('left')}
-                    className={`absolute left-0 z-10 p-2 rounded-full bg-gray-800 text-white shadow-lg
+                    className={`absolute left-0 z-5 p-2 rounded-full bg-gray-800 text-white shadow-lg
                                 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-75
                                 transition-opacity duration-300 ${canScrollLeft ? 'opacity-100' : 'opacity-30 cursor-not-allowed'}`}
                     disabled={!canScrollLeft}
@@ -141,7 +141,7 @@ function Testimonials() {
 
                 <button
                     onClick={() => slide('right')}
-                    className={`absolute right-0 z-10 p-2 rounded-full bg-gray-800 text-white shadow-lg
+                    className={`absolute right-0 z-5 p-2 rounded-full bg-gray-800 text-white shadow-lg
                                 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-75
                                 transition-opacity duration-300 ${canScrollRight ? 'opacity-100' : 'opacity-30 cursor-not-allowed'}`}
                     disabled={!canScrollRight}

@@ -15,7 +15,7 @@ function Carousel() {
     setImageLinks([slide1, slide2, slide3]);
   }, []);
 
-  // Change the image every 5 second using setInterval.
+  // Change the image every 1 second using setInterval.
   useEffect(() => {
     const interval = setInterval(() => {
       setIsFading(true);
@@ -23,7 +23,7 @@ function Carousel() {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % imageLinks.length);
         setIsFading(false); 
       }, 500); 
-    }, 50000);
+    }, 3000);
     return () => clearInterval(interval);
     }, [imageLinks]);
 
@@ -50,13 +50,13 @@ function Carousel() {
   const nextIndex = (currentIndex + 1) % imageLinks.length;
   
   return (
-    <section id="Gallery" className="flex flex-col gap-10 items-center justify-center 2xl:mt-30 md:mt-30 mt-20">
-      <div className="flex flex-col items-center justify-center 2xl:gap-8 md:gap-5 md:w-full w-86 gap-5">
+    <section id="Gallery" className="flex w-screen flex-col gap-10 items-center justify-center 2xl:mt-30 md:mt-30 mt-20">
+      <div className="flex flex-col items-center justify-center 2xl:gap-8 md:gap-5 w-full md:max-w-5xl max-w-xl mx-auto gap-5 px-4">
         <h1 className="2xl:text-9xl md:text-8xl text-6xl font-bold text-center bg-gradient-to-t from-white to-green-500 text-transparent bg-clip-text">Meet our champions</h1>
-        <h2 className="2xl:text-3xl md:text-2xl text-xl">Meet our champions</h2>
+        <h2 className="2xl:text-3xl md:text-2xl text-xl">encounter our talents</h2>
       </div>
 
-      <div className="flex flex-row justify-center items-center relative">
+      <div className="flex flex-row justify-center items-center relative w-full overflow-x-hidden">
         {imageLinks.length > 0 && (
           <div className="flex justify-center relative">
             {/* Previous Image */}
@@ -84,21 +84,21 @@ function Carousel() {
               alt="next carousel slide"
               className="w-48 h-64 md:w-64 md:h-80 2xl:w-100 2xl:h-110 object-cover rounded-2xl shadow-lg cursor-pointer
                          transform scale-90 opacity-70 transition-all duration-500 ease-in-out
-                         hover:scale-95 hover:opacity-85 z-10"
+                         hover:scale-95 hover:opacity-85"
               onClick={nextImage}
             />
           </div>
         )}
         <button
             onClick={previousImage}
-            className="absolute -z-10 md:-left-9 md:block hidden hover:cursor-pointer bg-gray-100 p-2 rounded-full hover:bg-gray-300"
+            className="absolute -z-10 md:left-50 md:block hidden hover:cursor-pointer bg-gray-100 p-2 rounded-full hover:bg-gray-300"
         >
             <ChevronLeftIcon className="h-6 w-6 text-gray-500" />
         </button>
 
         <button
             onClick={nextImage}
-            className="absolute -z-10 md:-right-9 md:block hidden hover:cursor-pointer bg-gray-100 p-2 rounded-full hover:bg-gray-300"
+            className="absolute -z-10 md:right-50 md:block hidden hover:cursor-pointer bg-gray-100 p-2 rounded-full hover:bg-gray-300"
         >
             <ChevronRightIcon className="h-6 w-6 text-gray-500" />
         </button>
