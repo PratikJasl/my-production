@@ -31,7 +31,7 @@ function About(){
                                  <button 
                                     className="w-fit font-semibold bg-green-600 text-white 2xl:text-2xl md:text-xl text-md p-2 px-4 lg:px-5  rounded-3xl hover:scale-120 active:scale-120 transition transform duration-500 ease-in-out">
                                     <a 
-                                        href="" 
+                                        href="https://docs.google.com/forms/d/e/1FAIpQLSe4K0iCM1DYTy0Ss412hIsnsHUG6lpaC9IK8VsIGl3TbBYJUA/viewform" 
                                         target="blank">
                                         Book a Demo
                                     </a>

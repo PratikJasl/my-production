@@ -2,7 +2,7 @@ import smash from '../../assets/smash.png';
 
 function Introduce(){
     return(
-        <section id='Introduce' className="w-screen text-start mt-20 2xl:p-20 md:p-15 p-10">
+        <section id='Introduce' className="w-screen text-start md:mt-10 mt-20 2xl:p-20 md:p-15 p-10">
             <div className="flex lg:flex-row flex-col items-center justify-between font-poppins">
                 <div className="flex flex-col lg:order-1 order-2 md:gap-15 gap-2 ">
                     <div className="flex flex-col md:items-start items-center 2xl:gap-2">
