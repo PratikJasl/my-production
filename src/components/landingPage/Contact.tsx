@@ -31,7 +31,7 @@ function Contact(){
                     <button 
                         className="w-fit bg-green-600 text-white text-xl 2xl:text-2xl p-2 rounded-lg hover:scale-120 active:scale-120 transition transform duration-500 ease-in-out">
                         <a 
-                            href="" 
+                            href="https://docs.google.com/forms/d/e/1FAIpQLSe4K0iCM1DYTy0Ss412hIsnsHUG6lpaC9IK8VsIGl3TbBYJUA/viewform" 
                             target="blank">
                             Get in Touch!
                         </a>

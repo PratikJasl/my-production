@@ -1,3 +1,5 @@
+//Section is commendted out until the requirements are finalized.
+
 // import design1 from "../../assets/StandardPack1.png";
 // import packDetails1 from "../../assets/packDetails4.png";
 // import packDetails2 from "../../assets/packDetails3.png";

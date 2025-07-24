@@ -16,7 +16,7 @@ function Introduce(){
                             className="font-semibold md:mt-5 mt-2 w-fit bg-green-600 text-white 2xl:text-3xl md:text-2xl text-lg p-2 
                             px-6 lg:px-5 rounded-3xl hover:bg-green-500 animate-fadeInLeft">
                             <a 
-                                href="" 
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSe4K0iCM1DYTy0Ss412hIsnsHUG6lpaC9IK8VsIGl3TbBYJUA/viewform" 
                                 target="blank">
                                 Enroll Now!
                             </a>
