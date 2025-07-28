@@ -6,7 +6,7 @@ function Introduce(){
             <div className="flex lg:flex-row flex-col items-center justify-between font-poppins">
                 <div className="flex flex-col lg:order-1 order-2 md:gap-15 gap-2 ">
                     <div className="flex flex-col md:items-start items-center 2xl:gap-2">
-                        <h1 className="2xl:text-6xl md:text-5xl text-2xl md:pl-2 mt-0 md:mb-[-1rem]">Any Body Can</h1>
+                        <h1 className="2xl:text-6xl md:text-5xl text-xl md:pl-2 mt-2 md:mb-[-1rem]">Any Body Can</h1>
                         <h1 className="2xl:text-[10rem] md:text-[9rem] text-6xl font-bold mt-0 mb-0 p-0 animate-fadeInLeft">smash!</h1>
                     </div>
                     <div className="flex flex-col md:gap-2 gap-0 md:items-start items-center">

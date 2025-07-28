@@ -17,14 +17,14 @@ function About(){
                 <div className="flex flex-col order-2 md:order-none gap-5">
                     <div className={`flex flex-col md:gap-8 gap-5 sm:items-center md:items-start md:text-left text-center ${isVisible ? "animate-fadeInLeft" : ""}`}>
                         <div className="flex flex-col md:items-start items-center md:gap-5 gap-1">
-                            <p className="2xl:text-6xl md:text-4xl text-2xl">Meet</p>
+                            <p className="2xl:text-6xl md:text-4xl text-xl">Meet</p>
                             <div className="flex flex-col 2xl:gap-2 md:gap-1">
-                                <p className="2xl:text-8xl md:text-7xl text-4xl font-semibold">Ranjit </p>
-                                <p className="2xl:text-8xl md:text-7xl text-4xl font-semibold">Subramaniyam</p>
+                                <p className="2xl:text-8xl md:text-7xl text-4xl font-bold">Ranjit </p>
+                                <p className="2xl:text-8xl md:text-7xl text-4xl font-bold">Subramaniyam</p>
                             </div>
                         </div>
-                        
-                        <p className="2xl:text-2xl md:text-xl text-xl">National Level Player and International Certified Badminton Coach</p>
+
+                        <p className="2xl:text-2xl md:text-xl text-lg">National Level Player and International Certified Badminton Coach</p>
 
                         <div className="md:mt-5 flex md:flex-row flex-col 2xl:gap-8 gap-5 w-full items-center">
                             <div>

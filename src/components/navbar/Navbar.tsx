@@ -47,13 +47,13 @@ function Navbar(){
                         transform transition-all duration-500 ease-in-out
                         ${menuOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0 pointer-events-none"}`}
                     >
-                        <div className="flex flex-col items-center justify-center p-4 gap-5">
-                            <a href="#Introduce" className="hover:text-green-500  lg:text-xl">Home</a>
-                            <a href="#About" className="hover:text-green-500  lg:text-xl">About</a>
-                            <a href="#WhyUs" className="hover:text-green-500  lg:text-xl">WhyUs</a>
-                            <a href="#Gallery" className="hover:text-green-500  lg:text-xl">Gallery</a>
-                            <a href="#Testimonials" className="hover:text-green-500  lg:text-xl">Testimonials</a>
-                            <a href="#Contact" className="hover:text-green-500  lg:text-xl">Contact</a>
+                        <div className="flex flex-col items-center justify-center text-center p-4 gap-5">
+                            <a href="#Introduce" className="hover:text-green-500 w-full lg:text-xl">Home</a>
+                            <a href="#About" className="hover:text-green-500 w-full lg:text-xl">About</a>
+                            <a href="#WhyUs" className="hover:text-green-500 w-full lg:text-xl">WhyUs</a>
+                            <a href="#Gallery" className="hover:text-green-500 w-full lg:text-xl">Gallery</a>
+                            <a href="#Testimonials" className="hover:text-green-500 w-full lg:text-xl">Testimonials</a>
+                            <a href="#Contact" className="hover:text-green-500 w-full lg:text-xl">Contact</a>
                         </div>
                     </div> 
                 </div>
