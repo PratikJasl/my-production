@@ -4,12 +4,12 @@ import whyUs3 from "../../assets/whyus3.png";
 import whyUs4 from "../../assets/whyus4.png";
 import whyUs5 from "../../assets/whyus5.png";
 import whyUs6 from "../../assets/whyus6.png";
-import { useIsVisible } from "../../services/useIsVisible";
+// import { useIsVisible } from "../../services/useIsVisible";
 import { useEffect, useRef, useState } from "react";
 
 function WhyUS(){
     const Ref1 = useRef<HTMLDivElement | null>(null);
-    const isVisible1 = useIsVisible(Ref1);
+    // const isVisible1 = useIsVisible(Ref1);
     const Ref2 = useRef<HTMLDivElement | null>(null);
     // const isVisible2 = useIsVisible(Ref2);
     const [activeIndex, setActiveIndex] = useState<number | null>(null);
