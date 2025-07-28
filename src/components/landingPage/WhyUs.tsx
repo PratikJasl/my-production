@@ -5,13 +5,93 @@ import whyUs4 from "../../assets/whyus4.png";
 import whyUs5 from "../../assets/whyus5.png";
 import whyUs6 from "../../assets/whyus6.png";
 import { useIsVisible } from "../../services/useIsVisible";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 function WhyUS(){
     const Ref1 = useRef<HTMLDivElement | null>(null);
     const isVisible1 = useIsVisible(Ref1);
     const Ref2 = useRef<HTMLDivElement | null>(null);
     const isVisible2 = useIsVisible(Ref2);
+    const [activeIndex, setActiveIndex] = useState<number | null>(null);
+    const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
+    const whyUs_data = [
+        {
+            img: whyUs1,
+            title: "One on One Mentorship",
+            description: "Personalized coaching tailored to individual player needs."
+        },
+        {
+            img: whyUs2,
+            title: "Experienced Coaches",
+            description: "Certified coaches with National and International experience."
+        },
+        {
+            img: whyUs3,
+            title: "Flexible Scheduling",
+            description: "Training sessions that fit your busy lifestyle."
+        },
+        {
+            img: whyUs4,
+            title: "Group Training Sessions",
+            description: "Collaborative training that enhances teamwork and skills."
+        },
+        {
+            img: whyUs5,
+            title: "State-of-the-Art Facilities",
+            description: "Access to top-notch training equipment and facilities."
+        },
+        {
+            img: whyUs6,
+            title: "Proven Track Record",
+            description: "Success stories from our trained athletes."
+        }
+    ]
+
+    useEffect(() => {
+        if(!Ref2.current) return; //If the Ref2 section is not available, return early.
+        
+        const observerOptions = {
+            root: Ref2.current, 
+            rootMargin: '0px',
+            threshold: 0.7 
+        };
+
+        //@dev: Set up the intersection Observer, and turn activeIndex true, when div is in view.
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    const index = itemRefs.current.findIndex(item => item === entry.target);
+                    if (index !== -1) {
+                        setActiveIndex(index);
+                    }
+                }
+            });
+        }, observerOptions);
+
+        //@dev: Start observing each item
+        itemRefs.current.forEach(item => {
+            if(item) observer.observe(item);
+        });
+
+        //@dev: Clean up the observer on unmount
+        return () => {
+            itemRefs.current.forEach(item => {
+                if(item) observer.unobserve(item);
+            });
+            observer.disconnect();
+        };
+        
+    }, [Ref2.current]);
+
+    const scrollToItem = (index: number) => {
+        if (itemRefs.current[index]) {
+            itemRefs.current[index].scrollIntoView({
+                behavior: 'smooth', 
+                inline: 'center' 
+            });
+        }
+    };
+
     return(
         <section id="WhyUs" className="w-full 2xl:mt-30 md:mt-20 mt-15">
             <div className="flex flex-col items-center justify-center 2xl:gap-15 gap-5">
@@ -24,41 +104,34 @@ function WhyUS(){
                 </div>
 
                 <div ref={Ref2} className={`flex flex-row items-center justify-start gap-10 p-5 overflow-x-auto scrollbar-custom w-[20rem] md:w-[61rem] 2xl:w-[82rem] ${isVisible2 ? "animate-fadeInUp" : ""}`}>
-                    <div className="flex flex-col 2xl:gap-5 gap-2 items-center text-center shrink-0 p-5 2xl:h-90 md:h-80 h-65 lg:w-72 w-70 bg-white text-black rounded-2xl hover:scale-110 active:scale-110 transition-transform duration-800 ease-in-out">
-                        <img src={whyUs1} alt="coach-student" className="md:h-45 md:w-35 h-35" />
-                        <h1 className="lg:text-xl text-lg font-bold">One on One Mentorship</h1>
-                        <p className="text-md">Personalized coaching tailored to individual player needs.</p>
-                    </div>
+                    {whyUs_data.map((item, index) => {
+                        return(
+                            <div 
+                                key={index} 
+                                className="flex flex-col 2xl:gap-5 gap-2 items-center text-center shrink-0 p-5 2xl:h-90 md:h-80 h-65 lg:w-72 w-70 bg-white text-black rounded-2xl hover:scale-110 active:scale-110 transition-transform duration-800 ease-in-out"
+                                ref={htmlRef => { itemRefs.current[index] = htmlRef;}}
+                            >
+                                <img src={item.img} alt="coach-student" className="md:h-45 md:w-35 h-35"/>
+                                <h1 className="lg:text-xl text-lg font-bold">{item.title}</h1>
+                                <p className="text-md">{item.description}</p>
+                            </div>
+                        )
+                    })}
+                </div>
 
-                    <div className="flex flex-col 2xl:gap-5 gap-2 items-center text-center shrink-0 p-5 2xl:h-90 md:h-80 h-65 lg:w-72 w-70 bg-white text-black rounded-2xl hover:scale-110 active:scale-110 transition-transform duration-800 ease-in-out">
-                        <img src={whyUs4} alt="coach-student" className="lg:h-45 lg:w-50 h-35" />
-                        <h1 className="lg:text-xl text-lg font-bold">Group Training Sessions</h1>
-                        <p className="text-md">Collaborative training that enhances teamwork and skills.</p>
-                    </div>
-
-                    <div className="flex flex-col 2xl:gap-5 gap-2 items-center text-center shrink-0 p-5 2xl:h-90 md:h-80 h-65 lg:w-72 w-70 bg-white text-black rounded-2xl hover:scale-110 active:scale-110 transition-transform duration-800 ease-in-out">
-                        <img src={whyUs2} alt="coach-student" className="lg:h-45 lg:w-25 h-35" />
-                        <h1 className="lg:text-xl text-lg font-bold">Experienced Coaches</h1>
-                        <p className="text-md">Certified coaches with National and International experience.</p>
-                    </div>
-
-                    <div className="flex flex-col 2xl:gap-5 gap-2 items-center text-center shrink-0 p-5 2xl:h-90 md:h-80 h-65 lg:w-72 w-70 bg-white text-black rounded-2xl hover:scale-110 active:scale-110 transition-transform duration-800 ease-in-out">
-                        <img src={whyUs5} alt="coach-student" className="lg:h-45 lg:w-40 h-35" />
-                        <h1 className="lg:text-xl text-lg font-bold text-black">Structured Training</h1>
-                        <p className="text-md">Step by Step training from basics to advanced.</p>
-                    </div>
-
-                    <div className="flex flex-col 2xl:gap-5 gap-2 items-center text-center shrink-0 p-5 2xl:h-90 md:h-80 h-65 lg:w-72 w-70 bg-white text-black rounded-2xl hover:scale-110 active:scale-110 transition-transform duration-800 ease-in-out">
-                        <img src={whyUs3} alt="coach-student" className="lg:h-45 lg:w-70 h-35" />
-                        <h1 className="lg:text-lg text-lg font-bold">Fitness & Injury Prevention</h1>
-                        <p className="text-md">Badminton specific fitness and injury prevention sessions.</p>
-                    </div>
-
-                    <div className="flex flex-col 2xl:gap-5 gap-2 items-center text-center shrink-0 p-5 2xl:h-90 md:h-80 h-65 lg:w-72 w-70 bg-white text-black rounded-2xl hover:scale-110 active:scale-110 transition-transform duration-800 ease-in-out">
-                        <img src={whyUs6} alt="coach-student" className="lg:h-45 lg:w-45 h-35" />
-                        <h1 className="lg:text-xl text-lg font-bold text-black">Regular Tournaments</h1>
-                        <p className="text-md">Match experience through inhouse and inter-academy events.</p>
-                    </div>
+                <div className="flex flex-row items-center justify-center gap-4">
+                    {whyUs_data.map((_, index)=> {
+                        return(
+                            <button 
+                                key={index} 
+                                onClick={() => scrollToItem(index)}
+                                className={`w-3 h-3 rounded-full transition-colors duration-300 hover:cursor-pointer ${
+                                    activeIndex === index ? 'bg-green-500 scale-125' : 'bg-gray-400'
+                                }`}
+                            >
+                            </button>
+                        )
+                    })}
                 </div>
             </div>
         </section>
