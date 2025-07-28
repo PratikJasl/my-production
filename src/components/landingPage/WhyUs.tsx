@@ -95,7 +95,7 @@ function WhyUS(){
     return(
         <section id="WhyUs" className="w-full 2xl:mt-30 md:mt-20 mt-15">
             <div className="flex flex-col items-center justify-center 2xl:gap-15 gap-5">
-                <div ref={Ref1} className={`flex flex-col items-center justify-center 2xl:gap-15 md:gap-8 md:w-full w-86 gap-5 ${isVisible1 ? "animate-fadeInUp" : ""}`}>
+                <div ref={Ref1} className='flex flex-col items-center justify-center 2xl:gap-15 md:gap-8 md:w-full w-86 gap-5'>
                     <h1 className="2xl:text-9xl md:text-8xl text-6xl font-bold">Why <span className="text-green-400">Us</span> ?</h1>
                     <p className="2xl:text-3xl md:text-2xl text-xl text-center">
                         What makes us unique is our unwavering commitment to <span className="text-green-400">excellence. </span>
