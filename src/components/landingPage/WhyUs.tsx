@@ -11,7 +11,7 @@ function WhyUS(){
     const Ref1 = useRef<HTMLDivElement | null>(null);
     const isVisible1 = useIsVisible(Ref1);
     const Ref2 = useRef<HTMLDivElement | null>(null);
-    const isVisible2 = useIsVisible(Ref2);
+    // const isVisible2 = useIsVisible(Ref2);
     const [activeIndex, setActiveIndex] = useState<number | null>(null);
     const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
     const whyUs_data = [
@@ -103,7 +103,7 @@ function WhyUS(){
                     </p>
                 </div>
 
-                <div ref={Ref2} className={`flex flex-row items-center justify-start gap-10 p-5 overflow-x-auto scrollbar-custom w-[20rem] md:w-[61rem] 2xl:w-[82rem] ${isVisible2 ? "animate-fadeInUp" : ""}`}>
+                <div ref={Ref2} className='flex flex-row items-center justify-start gap-10 p-5 overflow-x-auto scrollbar-custom w-[20rem] md:w-[61rem] 2xl:w-[82rem]'>
                     {whyUs_data.map((item, index) => {
                         return(
                             <div 
