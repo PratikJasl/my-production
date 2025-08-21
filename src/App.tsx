@@ -7,7 +7,7 @@ const Home = lazy(() => import('./components/landingPage/Home'));
 
 function App() {
     return (
-        <div className='h-screen flex flex-col items-center justify-center overflow-auto scroll-smooth [scrollbar-width:none]'>
+        <div className='flex flex-col items-center justify-center overflow-x-hidden scroll-smooth [scrollbar-width:none]'>
             <Navbar />
             <Routes>
                 <Route path='/' element={<Home />} />
