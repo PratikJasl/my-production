@@ -50,7 +50,7 @@ function Carousel() {
   const nextIndex = (currentIndex + 1) % imageLinks.length;
   
   return (
-    <section id="Gallery" className="flex w-screen flex-col gap-10 items-center justify-center 2xl:mt-30 md:mt-30 mt-20">
+    <section id="Gallery" className="flex w-screen flex-col gap-10 items-center justify-center 2xl:mt-30 md:mt-30 mt-20 scroll-m-16">
       <div className="flex flex-col items-center justify-center 2xl:gap-8 md:gap-5 w-full md:max-w-5xl max-w-xl mx-auto gap-5 px-4">
         <h1 className="2xl:text-9xl md:text-8xl text-6xl font-bold text-center bg-gradient-to-t from-white to-green-500 text-transparent bg-clip-text">Meet our champions</h1>
         <h2 className="2xl:text-3xl md:text-2xl text-xl">encounter our talents</h2>
