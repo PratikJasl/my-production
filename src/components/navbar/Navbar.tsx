@@ -1,7 +1,6 @@
 import logo from "../../assets/logo.png";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { Bars3Icon} from "@heroicons/react/24/outline";
-import { Link } from "react-router-dom";
 import { useState } from "react";
 
 
@@ -17,7 +16,7 @@ function Navbar(){
             <div className="flex flex-row justify-between items-center fixed top-0 bg-black min-w-screen md:h-15 h-15 p-3 z-10">
                 
                 <div className="lg:text-2xl">
-                   <Link to="/"> <img src={logo} alt="" className="md:h-12 md:w-50 md:mt-2 h-10 w-35" /> </Link>
+                   <a href="#Introduce"> <img src={logo} alt="" className="md:h-12 md:w-50 md:mt-2 h-10 w-35" /> </a>
                 </div>
 
                 <div>

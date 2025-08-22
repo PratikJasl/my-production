@@ -103,7 +103,7 @@ function WhyUS(){
                     </p>
                 </div>
 
-                <div ref={Ref2} className='flex flex-row items-center justify-start gap-10 p-5 overflow-x-auto scrollbar-custom w-[20rem] md:w-[61rem] 2xl:w-[82rem]'>
+                <div ref={Ref2} className='flex flex-row items-center justify-start gap-10 p-5 overflow-x-auto scrollbar-hide w-[20rem] md:w-[61rem] 2xl:w-[82rem]'>
                     {whyUs_data.map((item, index) => {
                         return(
                             <div 

@@ -32,6 +32,10 @@ html {
     background-color: #f3f4f6;
     border-radius: 5px;
   }
+
+  .scrollbar-hide {
+    scrollbar-width: none;
+  }
 }
 
 @theme {

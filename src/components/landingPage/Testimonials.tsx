@@ -100,7 +100,7 @@ function Testimonials() {
             <div ref={Ref1} className="relative lg:w-full w-70 flex items-center justify-center ">
                 <div
                     ref={scrollContainerRef}
-                    className="flex flex-row items-center justify-start gap-5 p-1 overflow-x-auto scrollbar-custom md:w-[61rem] 2xl:w-[82rem]"
+                    className="flex flex-row items-center justify-start gap-5 p-1 overflow-x-auto scrollbar-hide md:w-[61rem] 2xl:w-[82rem]"
                 >
                     {testimonialsData.map((testimonial, index) => (
                         <div

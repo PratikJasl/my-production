@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { ChevronLeftIcon } from "@heroicons/react/24/outline";
-import { ChevronRightIcon } from "@heroicons/react/24/outline";
+// import { ChevronLeftIcon } from "@heroicons/react/24/outline";
+// import { ChevronRightIcon } from "@heroicons/react/24/outline";
 import slide1 from "../../assets/carasol-2.png";
 import slide2 from "../../assets/carasol-1.png";
 import slide3 from "../../assets/carasol-3.jpg";
@@ -89,7 +89,7 @@ function Carousel() {
             />
           </div>
         )}
-        <button
+        {/* <button
             onClick={previousImage}
             className="absolute -z-10 md:left-50 md:block hidden hover:cursor-pointer bg-gray-100 p-2 rounded-full hover:bg-gray-300"
         >
@@ -101,7 +101,7 @@ function Carousel() {
             className="absolute -z-10 md:right-50 md:block hidden hover:cursor-pointer bg-gray-100 p-2 rounded-full hover:bg-gray-300"
         >
             <ChevronRightIcon className="h-6 w-6 text-gray-500" />
-        </button>
+        </button> */}
       </div>
     </section>
   );
